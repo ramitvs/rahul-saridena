@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - Dr. Rahul Saridena | Events, Campaigns & Community</title>
+  <meta name="description"
+    content="Gallery of Dr. Rahul Saridena - photos and videos from events, campaigns, community programs, and key moments in his public service journey." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+  <!-- ── NAVBAR ─────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/images/logo-white.png" alt="BJP Lotus" class="bjp-logo"
+            style="height: 38px; width: auto; flex-shrink: 0;" />
+          <div style="display: flex; flex-direction: column; line-height: 1.1;">
+            <span class="logo-name">Dr. Rahul Saridena</span>
+            <span class="logo-title">BJP Telangana Spokesperson</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="achievements.html">Achievements</a></li>
+          <li><a href="vision.html">Vision & Mission</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Get in Touch</a>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <button class="close-btn">✕</button>
+    <a href="index.html">Home</a><a href="about.html">About</a>
+    <a href="achievements.html">Achievements</a><a href="vision.html">Vision & Mission</a>
+    <a href="gallery.html">Gallery</a><a href="news.html">News</a><a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ── PAGE HERO ──────────────────────────── -->
+  <section class="page-hero">
+    <div class="page-hero-deco" aria-hidden="true">
+      <svg viewBox="0 0 1440 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <pattern id="tech-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.75" />
+            <circle cx="0" cy="0" r="1.2" fill="rgba(255,255,255,0.18)" />
+          </pattern>
+        </defs>
+        <!-- Repeating grid -->
+        <rect width="100%" height="100%" fill="url(#tech-grid)" opacity="0.9" />
+
+        <!-- Radar/Strategic blueprint rings on right side -->
+        <circle cx="1220" cy="140" r="160" fill="none" stroke="rgba(255,255,255,0.035)" stroke-width="1"
+          stroke-dasharray="4 4" />
+        <circle cx="1220" cy="140" r="110" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+        <circle cx="1220" cy="140" r="70" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"
+          stroke-dasharray="2 2" />
+        <circle cx="1220" cy="140" r="30" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.2" />
+        <line x1="1020" y1="140" x2="1420" y2="140" stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+        <line x1="1220" y1="-40" x2="1220" y2="320" stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+
+        <!-- Subtle accent on left side -->
+        <circle cx="220" cy="110" r="80" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"
+          stroke-dasharray="6 6" />
+        <circle cx="220" cy="110" r="40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+      </svg>
+    </div>
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="breadcrumb">
+          <a href="index.html"><i class="ph ph-house-simple" style="margin-right:5px;"></i>Home</a>
+          <span class="bc-sep"><i class="ph ph-caret-right"></i></span>
+          <span class="bc-current">Photo Gallery</span>
+        </div>
+        <h1>Photo Gallery</h1>
+        <div class="page-hero-divider"></div>
+        <p>Capturing key moments from events, campaigns, community activities, and milestones in public service.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GALLERY SECTION ───────────────────── -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Filters -->
+      <div class="gallery-filters reveal" id="gallery-filters">
+        <button class="tag active" data-filter="all">All Photos</button>
+        <button class="tag" data-filter="events">Events</button>
+        <button class="tag" data-filter="campaigns">Campaigns</button>
+        <button class="tag" data-filter="community">Community</button>
+        <button class="tag" data-filter="media">Media</button>
+        <button class="tag" data-filter="party">Party Activities</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="gallery-grid">
+
+        <!-- Events -->
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/bjp/5.jpeg" alt="BJP Telangana Grand Rally" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Events</div>
+              <div class="gi-title">BJP Telangana Grand Rally</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="media">
+          <img src="assets/images/bjp/13.jpeg" alt="TV Media Interview" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Media</div>
+              <div class="gi-title">National TV Interview - Governance & Policy</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="party">
+          <img src="assets/images/bjp/6.jpeg" alt="BJP State Meeting" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Party Activities</div>
+              <div class="gi-title">BJP Telangana State Executive Meeting</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="community">
+          <img src="assets/images/bjp/7.jpeg" alt="Community Outreach Program" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Community</div>
+              <div class="gi-title">Community Outreach - Hyderabad</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="campaigns">
+          <img src="assets/images/bjp/8.jpeg" alt="Campaign Rally" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Campaigns</div>
+              <div class="gi-title">Viksit Bharat Campaign - Secunderabad</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/bjp/9.jpeg" alt="Press Conference" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Events</div>
+              <div class="gi-title">Press Conference - Agricultural Policy</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="community">
+          <img src="assets/images/bjp/10.jpeg" alt="Youth Program" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Community</div>
+              <div class="gi-title">Youth Leadership Workshop - Warangal</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="media">
+          <img src="assets/images/bjp/11.jpeg" alt="Newspaper Interview" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Media</div>
+              <div class="gi-title">Print Media Interview - Telangana Today</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="party">
+          <img src="assets/images/bjp/12.jpeg" alt="Party Convention" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Party Activities</div>
+              <div class="gi-title">BJP National Convention Delegation</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="campaigns">
+          <img src="assets/images/bjp/14.jpeg" alt="Door to Door Campaign" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Campaigns</div>
+              <div class="gi-title">Booth-Level Grassroots Campaign - Karimnagar</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/bjp/15.jpeg" alt="Cultural Program" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Events</div>
+              <div class="gi-title">Telugu Cultural Celebration - Hyderabad</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="community">
+          <img src="assets/images/bjp/16.jpeg" alt="Farmers Meet" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Community</div>
+              <div class="gi-title">Farmers' Welfare Meet - Nalgonda</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="party">
+          <img src="assets/images/bjp/17.jpeg" alt="BJP State Committee" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Party Activities</div>
+              <div class="gi-title">BJP State Committee Meeting - Hyderabad</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/bjp/18.jpeg" alt="Public Address" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Events</div>
+              <div class="gi-title">Public Address - Viksit Bharat Agenda</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="media">
+          <img src="assets/images/bjp/19.jpeg" alt="TV Debate Panel" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Media</div>
+              <div class="gi-title">Prime Time TV Debate - Policy Discussion</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="campaigns">
+          <img src="assets/images/bjp/20.jpeg" alt="Outreach Campaign" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Campaigns</div>
+              <div class="gi-title">Viksit Bharat Outreach - Nizamabad</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="community">
+          <img src="assets/images/bjp/21.jpeg" alt="Women Empowerment Program" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Community</div>
+              <div class="gi-title">Women's Empowerment Conclave - Hyderabad</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="party">
+          <img src="assets/images/bjp/22.jpeg" alt="Party Rally" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Party Activities</div>
+              <div class="gi-title">BJP Telangana Rally - Secunderabad</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/bjp/23.jpeg" alt="Seminar on Governance" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Events</div>
+              <div class="gi-title">Governance Seminar - Policy Forum</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="media">
+          <img src="assets/images/bjp/24.jpeg" alt="Media Briefing" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Media</div>
+              <div class="gi-title">Media Briefing - State Affairs</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="community">
+          <img src="assets/images/bjp/25.jpeg" alt="Rural Community Program" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Community</div>
+              <div class="gi-title">Rural Community Connect - Khammam</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="campaigns">
+          <img src="assets/images/bjp/26.jpeg" alt="Padayatra Campaign" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Campaigns</div>
+              <div class="gi-title">Padayatra Campaign - Adilabad</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="party">
+          <img src="assets/images/bjp/27.jpeg" alt="Protocol Cell Meeting" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Party Activities</div>
+              <div class="gi-title">State Protocol Cell Coordination Meeting</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/bjp/28.jpeg" alt="BJP Foundation Day" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Events</div>
+              <div class="gi-title">BJP Foundation Day Celebration - Hyderabad</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="media">
+          <img src="assets/images/bjp/29.jpeg" alt="Press Meet" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Media</div>
+              <div class="gi-title">Press Meet - Agricultural Reforms</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="community">
+          <img src="assets/images/bjp/30.jpeg" alt="Farmers Conclave" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Community</div>
+              <div class="gi-title">Farmers' Conclave - Warangal</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="campaigns">
+          <img src="assets/images/bjp/31.jpeg" alt="BJP Campaign Ground" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Campaigns</div>
+              <div class="gi-title">Ground-Level Campaign - Medak</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="party">
+          <img src="assets/images/bjp/32.jpeg" alt="BJP Core Committee" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Party Activities</div>
+              <div class="gi-title">BJP Core Committee Strategy Meet</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/bjp/33.jpeg" alt="National Leaders Visit" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Events</div>
+              <div class="gi-title">National Leaders' Visit - Hyderabad</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="media">
+          <img src="assets/images/bjp/34.jpeg" alt="Interview Studio" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Media</div>
+              <div class="gi-title">Studio Interview - Regional Channel</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="community">
+          <img src="assets/images/bjp/35.jpeg" alt="Youth Summit" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Community</div>
+              <div class="gi-title">Yuva Shakti Summit - Nation Building</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="campaigns">
+          <img src="assets/images/bjp/36.jpeg" alt="Viksit Bharat Campaign" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Campaigns</div>
+              <div class="gi-title">Viksit Bharat Awareness Drive - Nalgonda</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="party">
+          <img src="assets/images/bjp/37.jpeg" alt="BJP Rally" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Party Activities</div>
+              <div class="gi-title">BJP Telangana Mahasabha</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/bjp/38.jpeg" alt="Public Meeting" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Events</div>
+              <div class="gi-title">Public Meeting - Governance Accountability</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="media">
+          <img src="assets/images/bjp/39.jpeg" alt="Panel Discussion" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Media</div>
+              <div class="gi-title">TV Panel Discussion - Telangana Budget</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="community">
+          <img src="assets/images/bjp/40.jpeg" alt="Social Welfare" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Community</div>
+              <div class="gi-title">Social Welfare Distribution - Mahbubnagar</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="campaigns">
+          <img src="assets/images/bjp/41.jpeg" alt="Campaign Meeting" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Campaigns</div>
+              <div class="gi-title">Campaign Planning Meet - District Level</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="party">
+          <img src="assets/images/bjp/42.jpeg" alt="BJP Workers Meet" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Party Activities</div>
+              <div class="gi-title">BJP Workers' Training Meet - Hyderabad</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/bjp/43.jpeg" alt="Cultural Event" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Events</div>
+              <div class="gi-title">Ugadi Cultural Event - Telugu Heritage</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="media">
+          <img src="assets/images/bjp/44.jpeg" alt="News Channel Debate" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Media</div>
+              <div class="gi-title">News Channel Debate - Political Affairs</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="community">
+          <img src="assets/images/bjp/45.jpeg" alt="Housing Scheme" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Community</div>
+              <div class="gi-title">Housing Scheme Beneficiary Program</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="campaigns">
+          <img src="assets/images/bjp/46.jpeg" alt="Constituency Tour" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Campaigns</div>
+              <div class="gi-title">Constituency Tour - Rangareddy</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="party">
+          <img src="assets/images/bjp/47.jpeg" alt="BJP Manifesto Launch" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Party Activities</div>
+              <div class="gi-title">BJP Policy Discussion - Manifesto Review</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/bjp/48.jpeg" alt="Independence Day" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Events</div>
+              <div class="gi-title">Independence Day Celebration - Hyderabad</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="media">
+          <img src="assets/images/bjp/49.jpeg" alt="Documentary Feature" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Media</div>
+              <div class="gi-title">Documentary Feature - Political Journey</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="community">
+          <img src="assets/images/bjp/50.jpeg" alt="Community Connect" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Community</div>
+              <div class="gi-title">Community Connect - Karimnagar</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="campaigns">
+          <img src="assets/images/bjp/51.jpeg" alt="Campaign Kick Off" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Campaigns</div>
+              <div class="gi-title">Campaign Kick-Off - Northern Telangana</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="party">
+          <img src="assets/images/bjp/52.jpeg" alt="BJP Anniversary" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Party Activities</div>
+              <div class="gi-title">BJP Telangana Anniversary Celebration</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/bjp/4.jpeg" alt="Leadership Conclave" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Events</div>
+              <div class="gi-title">Leadership Conclave - BJP Telangana</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <!-- Missing: 1.jpeg, 2.jpeg, 3.jpeg -->
+        <div class="gallery-item" data-category="party">
+          <img src="assets/images/bjp/1.jpeg" alt="Dr. Rahul Saridena - Official Portrait" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Party Activities</div>
+              <div class="gi-title">Dr. Rahul Saridena - BJP Spokesperson</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="media">
+          <img src="assets/images/bjp/2.jpeg" alt="Dr. Saridena - Media Portrait" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Media</div>
+              <div class="gi-title">Official Media Portrait - BJP Telangana</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="community">
+          <img src="assets/images/bjp/3.jpeg" alt="Dr. Saridena - Community Portrait" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Community</div>
+              <div class="gi-title">Public Engagement Portrait</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <!-- PNG Images: 1.png, 2.png, 9.png, 10.png, 12.png -->
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/bjp/1.png" alt="BJP Grand Event" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Events</div>
+              <div class="gi-title">BJP Telangana Grand Event</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="campaigns">
+          <img src="assets/images/bjp/2.png" alt="Campaign Gathering" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Campaigns</div>
+              <div class="gi-title">Major Campaign Gathering - Hyderabad</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="party">
+          <img src="assets/images/bjp/9.png" alt="BJP Party Programme" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Party Activities</div>
+              <div class="gi-title">BJP State Programme - Telangana</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="community">
+          <img src="assets/images/bjp/10.png" alt="Community Programme" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Community</div>
+              <div class="gi-title">Community Engagement Programme</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/bjp/12.png" alt="Special Event" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Events</div>
+              <div class="gi-title">Special BJP Event - Telangana</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-magnifying-glass-plus"></i></div>
+        </div>
+
+        <!-- Video: 53.mp4 -->
+        <div class="gallery-item gallery-video-item" data-category="media" id="video-53">
+          <video src="assets/images/bjp/53.mp4" muted loop playsinline poster="assets/images/bjp/5.jpeg"
+            onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0;"
+            style="width:100%;display:block;"></video>
+          <div class="gallery-item-overlay">
+            <div>
+              <div class="gi-cat">Media</div>
+              <div class="gi-title">BJP Telangana - Video Feature</div>
+            </div>
+          </div>
+          <div class="gallery-zoom-btn"><i class="ph ph-play-circle"></i></div>
+        </div>
+
+      </div>
+      <!-- End Gallery Grid -->
+
+    </div>
+  </section>
+
+  <!-- ── LIGHTBOX ───────────────────────────── -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightbox-close" title="Close"><i class="fa-solid fa-xmark"></i></span>
+    <span class="lightbox-nav lightbox-prev" id="lightbox-prev"><i class="fa-solid fa-chevron-left"></i></span>
+    <img src="" alt="" class="lightbox-img" id="lightbox-img" />
+    <span class="lightbox-nav lightbox-next" id="lightbox-next"><i class="fa-solid fa-chevron-right"></i></span>
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+
+  <!-- ── CTA ───────────────────────────────── -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="cta-text reveal">
+          <h2>Want to Share a Moment?</h2>
+          <p>If you have photos or videos from events featuring Dr. Rahul Saridena, we'd love to feature them. Reach out
+            to us with your media submissions.</p>
+        </div>
+        <div class="cta-actions reveal reveal-delay-2">
+          <a href="contact.html" class="btn btn-primary btn-lg"><i class="fa-solid fa-images"></i> Submit Photos</a>
+          <a href="contact.html" class="btn btn-outline btn-lg"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom: 8px;">
+            <img src="assets/images/logo-white.png" alt="BJP Lotus" class="bjp-logo"
+              style="height: 32px; width: auto; flex-shrink: 0;" />
+            <div style="display: flex; flex-direction: column; line-height: 1.1;">
+              <span class="logo-name" style="color:var(--white);font-size:1.3rem;">Dr. Rahul Saridena</span>
+              <span class="logo-title">BJP Telangana Spokesperson</span>
+            </div>
+          </div>
+          <p>Voice of Telangana. Vision for Viksit Bharat. Shaping Ideas. Inspiring Progress. Serving People.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/RahulSaridenaBJP" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://x.com/Rahul_Saridena/" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/rahulsaridena/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@RahulSaridena" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+            <li><a href="achievements.html"><i class="fa-solid fa-chevron-right"></i> Achievements</a></li>
+            <li><a href="vision.html"><i class="fa-solid fa-chevron-right"></i> Vision & Mission</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-chevron-right"></i> Gallery</a></li>
+            <li><a href="news.html"><i class="fa-solid fa-chevron-right"></i> News</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Gallery Categories</h5>
+          <ul>
+            <li><a href="gallery.html"><i class="fa-solid fa-chevron-right"></i> Events</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-chevron-right"></i> Campaigns</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-chevron-right"></i> Community Programs</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-chevron-right"></i> Media Appearances</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-chevron-right"></i> Party Activities</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <ul class="footer-contact">
+            <li><i class="fa-solid fa-phone icon"></i><span>+91 99599 88688</span></li>
+            <li><i class="fa-solid fa-envelope icon"></i><span>saridenarahul@gmail.com</span></li>
+            <li><i class="fa-solid fa-location-dot icon"></i><span>Dr. S. P. Mookerjee Bhawan, Opp. Exhibition Grounds, Nampally, Hyderabad - 500 001 Telangana</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Dr. Rahul Saridena. All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
