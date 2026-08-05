@@ -4,10 +4,6 @@
    #FF6B00 Saffron | #138808 Green | #FFFFFF White
    ============================================ */
 
-@import url('https://db.onlinewebfonts.com/c/ad828d6f2c5b6187df7d74bd697b2f48?family=All+Round+Gothic+Demi');
-@import url('https://db.onlinewebfonts.com/c/722cb8a1c168860d3dcfaa76cdfeda6b?family=All+Round+Gothic+Medium');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&family=Onest:wght@300;400;500;600;700;800;900&display=swap');
-
 /* ── CSS Variables ───────────────────────────── */
 :root {
   --saffron: #FF6B00;

@@ -5,11 +5,18 @@
 document.addEventListener("DOMContentLoaded", () => {
   /* ── 1. NAVBAR SCROLL ─────────────────────── */
   const navbar = document.querySelector(".navbar");
+  let ticking = false;
   const handleScroll = () => {
-    if (window.scrollY > 60) {
-      navbar?.classList.add("scrolled");
-    } else {
-      navbar?.classList.remove("scrolled");
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        if (window.scrollY > 60) {
+          navbar?.classList.add("scrolled");
+        } else {
+          navbar?.classList.remove("scrolled");
+        }
+        ticking = false;
+      });
+      ticking = true;
     }
   };
   window.addEventListener("scroll", handleScroll, { passive: true });
@@ -47,16 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ── 4. HERO BG TRANSITION ────────────────── */
   const heroBg = document.querySelector(".hero-bg");
   if (heroBg) {
-    const img = new Image();
-    img.src =
-      heroBg.style.backgroundImage
-        ?.replace(/url\(['"]?/, "")
-        .replace(/['"]?\)/, "") ||
-      getComputedStyle(heroBg)
-        .backgroundImage?.replace(/url\(['"]?/, "")
-        .replace(/['"]?\)/, "");
-    img.onload = () => heroBg.classList.add("loaded");
-    setTimeout(() => heroBg.classList.add("loaded"), 100);
+    heroBg.classList.add("loaded");
   }
 
   /* ── 5. SCROLL REVEAL ─────────────────────── */
