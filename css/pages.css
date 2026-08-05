@@ -481,6 +481,7 @@
   color: var(--white);
 }
 
+.pillar-text h3,
 .pillar-text h4 {
   color: var(--text-dark);
   margin-bottom: 4px;
@@ -572,6 +573,7 @@
   font-weight: 600;
 }
 
+.news-card h3,
 .news-card h4 {
   font-size: 1.05rem;
   line-height: 1.4;
@@ -580,6 +582,7 @@
   transition: var(--transition);
 }
 
+.news-card:hover h3,
 .news-card:hover h4 {
   color: var(--primary);
 }
@@ -860,6 +863,7 @@
   border-radius: 50%;
 }
 
+.position-item h3,
 .position-item h4 {
   font-size: 1.15rem;
   font-weight: 700;
@@ -1100,6 +1104,7 @@
   color: var(--white);
 }
 
+.focus-card h3,
 .focus-card h4 {
   font-size: 1.08rem;
   margin-bottom: 12px;
@@ -1171,6 +1176,7 @@
   box-shadow: 0 10px 30px rgba(255, 107, 0, 0.12);
 }
 
+.engine-card.national h3,
 .engine-card.national h4 {
   color: var(--white);
   font-size: 1.15rem;
@@ -1201,6 +1207,7 @@
   /* BJP Saffron border for synergy engine */
 }
 
+.engine-card.regional h3,
 .engine-card.regional h4 {
   color: var(--text-dark);
   font-size: 1.12rem;
@@ -1329,6 +1336,7 @@
   color: var(--white);
 }
 
+.commitment-card h3,
 .commitment-card h4 {
   font-size: 1.08rem;
   margin-bottom: 12px;
@@ -1925,12 +1933,13 @@
   /* Removed box shadow */
 }
 
+.contact-info-card h3,
 .contact-info-card h4 {
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--primary);
+  color: var(--saffron-text);
   margin-bottom: 8px;
 }
 

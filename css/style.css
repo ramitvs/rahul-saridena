@@ -12,6 +12,7 @@
 :root {
   --saffron: #FF6B00;
   --saffron-dark: #D45500;
+  --saffron-text: #C54400; /* WCAG 2.1 AA compliant (> 4.5:1 ratio on white) */
   --saffron-light: #FF9944;
   --saffron-pale: #FFF4EC;
   /* very light saffron - card/section bg */
@@ -165,7 +166,7 @@ p {
 }
 
 .text-primary {
-  color: var(--saffron);
+  color: var(--saffron-text);
 }
 
 .text-accent {
@@ -210,7 +211,7 @@ p {
 /* On dark/saffron hero background */
 .btn-primary {
   background: var(--white);
-  color: var(--saffron);
+  color: var(--saffron-text);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   border: 2px solid var(--white);
 }
@@ -280,7 +281,7 @@ p {
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--saffron);
+  color: var(--saffron-text);
   margin-bottom: 16px;
 }
 
@@ -385,12 +386,12 @@ p {
   display: inline-flex;
   align-items: center;
   margin: 0 8px;
-  color: rgba(255, 255, 255, 0.40);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 0.7rem;
 }
 
 .page-hero .breadcrumb .bc-current {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.90);
   font-weight: 500;
 }
 
@@ -445,7 +446,7 @@ p {
 }
 
 .navbar.scrolled .nav-logo .logo-title {
-  color: var(--saffron);
+  color: var(--saffron-text);
 }
 
 .navbar.scrolled .nav-links a {
@@ -454,7 +455,7 @@ p {
 
 .navbar.scrolled .nav-links a:hover,
 .navbar.scrolled .nav-links a.active {
-  color: var(--saffron);
+  color: var(--saffron-text);
 }
 
 .navbar.scrolled .nav-links a::after {
@@ -494,7 +495,7 @@ p {
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--saffron);
+  color: var(--saffron-text);
 }
 
 .nav-links {
@@ -527,7 +528,7 @@ p {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--saffron);
+  color: var(--saffron-text);
 }
 
 .nav-links a:hover::after,
@@ -640,7 +641,7 @@ p {
 /* ── Footer ──────────────────────────────────── */
 .footer {
   background: var(--text-dark);
-  color: rgba(255, 255, 255, 0.70);
+  color: rgba(255, 255, 255, 0.90);
   padding: 70px 0 0;
   border-top: 4px solid var(--saffron);
 }
@@ -662,9 +663,10 @@ p {
   margin-top: 16px;
   font-size: 0.9rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.85);
 }
 
+.footer h3,
 .footer h5 {
   font-family: var(--ff-body);
   font-size: 0.8rem;
@@ -685,7 +687,7 @@ p {
 
 .footer ul li a {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.85);
   transition: var(--transition);
   display: flex;
   align-items: flex-start;
@@ -703,7 +705,7 @@ p {
   gap: 12px;
   margin-bottom: 14px;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .footer-contact li .icon {
@@ -726,7 +728,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 1rem;
   transition: var(--transition);
 }
@@ -744,11 +746,11 @@ p {
   align-items: center;
   justify-content: space-between;
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.30);
+  color: rgba(255, 255, 255, 0.80);
 }
 
 .footer-bottom a {
-  color: var(--saffron);
+  color: var(--saffron-light);
 }
 
 /* ── Scroll Animation ────────────────────────── */
