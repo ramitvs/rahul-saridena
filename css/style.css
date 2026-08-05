@@ -4,6 +4,22 @@
    #FF6B00 Saffron | #138808 Green | #FFFFFF White
    ============================================ */
 
+/* ── Font Display Overrides ──────────────────── */
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Font Awesome 6 Brands';
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Phosphor';
+  font-display: swap;
+}
+
 /* ── CSS Variables ───────────────────────────── */
 :root {
   --saffron: #FF6B00;
