@@ -659,11 +659,16 @@ p {
   margin-bottom: 4px;
 }
 
+.footer .logo-title,
+.footer-brand .logo-title {
+  color: var(--saffron-light) !important;
+}
+
 .footer-brand p {
   margin-top: 16px;
   font-size: 0.9rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.90);
 }
 
 .footer h3,
@@ -673,7 +678,7 @@ p {
   font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: var(--saffron);
+  color: var(--saffron-light);
   margin-bottom: 20px;
 }
 
@@ -695,7 +700,7 @@ p {
 }
 
 .footer ul li a:hover {
-  color: var(--saffron);
+  color: var(--saffron-light);
   padding-left: 4px;
 }
 
@@ -705,11 +710,11 @@ p {
   gap: 12px;
   margin-bottom: 14px;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.90);
 }
 
 .footer-contact li .icon {
-  color: var(--saffron);
+  color: var(--saffron-light);
   flex-shrink: 0;
   margin-top: 2px;
 }
