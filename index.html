@@ -12,8 +12,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" /></noscript>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Mandali&family=Noto+Sans+Telugu:wght@400;500;600;700;800&family=Onest:wght@400;500;600;700;800&display=swap"
+    media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mandali&family=Noto+Sans+Telugu:wght@400;500;600;700;800&family=Onest:wght@400;500;600;700;800&display=swap" />
+  </noscript>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" /></noscript>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.0.3/src/regular/style.css" media="print" onload="this.media='all'" />
@@ -67,7 +72,7 @@
           <li><a href="vision.html">Vision & Mission</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="news.html">News</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mlc-election.html">MLC Election</a></li>
         </ul>
         <a href="contact.html" class="btn btn-primary btn-sm nav-cta">
           Get in Touch
@@ -89,6 +94,7 @@
     <a href="vision.html">Vision & Mission</a>
     <a href="gallery.html">Gallery</a>
     <a href="news.html">News</a>
+    <a href="mlc-election.html">MLC Election</a>
     <a href="contact.html">Contact</a>
   </div>
 
@@ -428,6 +434,7 @@
             <li><a href="vision.html"><i class="fa-solid fa-chevron-right"></i> Vision & Mission</a></li>
             <li><a href="gallery.html"><i class="fa-solid fa-chevron-right"></i> Gallery</a></li>
             <li><a href="news.html"><i class="fa-solid fa-chevron-right"></i> News</a></li>
+            <li><a href="mlc-election.html"><i class="fa-solid fa-chevron-right"></i> MLC Election 2027</a></li>
             <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
           </ul>
         </div>
@@ -474,7 +481,80 @@
     </div>
   </footer>
 
+  <!-- ── MLC ELECTION ANNOUNCEMENT POPUP MODAL (HOME ONLY) ── -->
+  <div class="mlc-modal-overlay" id="mlcAnnouncementModal" role="dialog" aria-modal="true" aria-labelledby="mlcModalTitle">
+    <div class="mlc-modal-card">
+      <button type="button" class="mlc-modal-close" id="mlcModalCloseBtn" aria-label="Close Announcement">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <span class="mlc-modal-eyebrow">గ్రాడ్యుయేట్ MLC ఎన్నిక</span>
+      <h2 class="mlc-modal-title" id="mlcModalTitle">MLC ఎన్నిక నమోదు</h2>
+      <p class="mlc-modal-desc">
+        మీ వ్యక్తిగత మరియు విద్యా వివరాలతో పాటు అవసరమైన పత్రాలను సమర్పించడం ద్వారా మీ నమోదును పూర్తి చేయండి.
+      </p>
+
+      <a href="mlc-election.html#mlc-form" class="mlc-modal-btn" id="mlcModalActionBtn">
+        <span>నమోదు ప్రారంభించండి</span>
+        <i class="fa-solid fa-arrow-right" style="font-size:0.9rem;"></i>
+      </a>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
+
+  <script>
+    // MLC Announcement Popup - triggers on home page visit
+    (function () {
+      const modal = document.getElementById('mlcAnnouncementModal');
+      const closeBtn = document.getElementById('mlcModalCloseBtn');
+      const actionBtn = document.getElementById('mlcModalActionBtn');
+
+      if (!modal) return;
+
+      function openModal() {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        try {
+          sessionStorage.setItem('mlc_popup_dismissed', 'true');
+        } catch (e) {}
+      }
+
+      // Check URL override or session storage
+      const urlParams = new URLSearchParams(window.location.search);
+      const forcePopup = urlParams.get('popup') === '1' || window.location.hash === '#mlc-popup';
+      const alreadyDismissed = sessionStorage.getItem('mlc_popup_dismissed');
+
+      if (forcePopup || !alreadyDismissed) {
+        // Smooth entrance delay after home page renders
+        setTimeout(openModal, 650);
+      }
+
+      // Dismiss buttons & events
+      closeBtn?.addEventListener('click', closeModal);
+
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+          closeModal();
+        }
+      });
+
+      actionBtn?.addEventListener('click', function () {
+        closeModal();
+      });
+    })();
+  </script>
 </body>
 
 </html>

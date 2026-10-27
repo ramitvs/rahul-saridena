@@ -1,9 +1,9 @@
-# Temporary and environment files
-.gemini/
-scratch/
-replace_map.py
-fix_clarity.py
-bbox.py
+# Local submission data
+submissions/*.csv
+!submissions/.gitkeep
+
+# System & Editor files
 .DS_Store
 Thumbs.db
-.git-credentials
+.vscode/
+.idea/

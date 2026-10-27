@@ -24,7 +24,8 @@
 :root {
   --saffron: #FF6B00;
   --saffron-dark: #D45500;
-  --saffron-text: #C54400; /* WCAG 2.1 AA compliant (> 4.5:1 ratio on white) */
+  --saffron-text: #C54400;
+  /* WCAG 2.1 AA compliant (> 4.5:1 ratio on white) */
   --saffron-light: #FF9944;
   --saffron-pale: #FFF4EC;
   /* very light saffron - card/section bg */
@@ -251,7 +252,30 @@ p {
   background: linear-gradient(135deg, var(--saffron), var(--saffron-dark));
   color: var(--white);
   border: 2px solid transparent;
-  box-shadow: 0 4px 20px rgba(255, 107, 0, 0.25);
+  box-shadow: 0 4px 16px rgba(255, 107, 0, 0.28);
+}
+
+.btn-dark:hover {
+  background: linear-gradient(135deg, #E65C00, #B84700);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 107, 0, 0.38);
+}
+
+/* On light/white sections - clean outline with dark text */
+.btn-outline-dark {
+  border: 2px solid #D1D5DB;
+  color: #1F2937;
+  background: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.btn-outline-dark:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: #FFF9F5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 0, 0.15);
 }
 
 .btn-green {
@@ -517,13 +541,14 @@ p {
 }
 
 .nav-links a {
-  padding: 8px 14px;
+  padding: 4px 11px;
   font-size: 0.88rem;
   font-weight: 600;
   color: var(--text-dark);
   border-radius: var(--radius-sm);
   transition: var(--transition);
   position: relative;
+  display: flex;
 }
 
 .nav-links a::after {
@@ -1317,4 +1342,157 @@ p {
 .thought-leadership-section .container {
   position: relative;
   z-index: 1;
+}
+
+/* ============================================
+   HOME PAGE - MLC ELECTION ANNOUNCEMENT POPUP
+   ============================================ */
+
+.mlc-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mlc-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mlc-modal-card {
+  position: relative;
+  background: #FFFFFF;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 26px;
+  padding: 42px 34px 34px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  transform: scale(0.92) translateY(24px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+/* Saffron to green tricolor gradient border frame matching the reference image */
+.mlc-modal-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 26px;
+  padding: 2.5px;
+  background: linear-gradient(135deg, #FF6B00 0%, #FFA45B 45%, #10B981 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.mlc-modal-overlay.active .mlc-modal-card {
+  transform: scale(1) translateY(0);
+}
+
+.mlc-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #F3F4F6;
+  border: 1px solid #E5E7EB;
+  color: #6B7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.mlc-modal-close:hover {
+  background: #E5E7EB;
+  color: #111827;
+  transform: rotate(90deg) scale(1.05);
+}
+
+.mlc-modal-eyebrow {
+  display: inline-block;
+  color: #E65100;
+  font-family: 'Noto Sans Telugu', 'Mandali', 'Onest', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin-bottom: 8px;
+}
+
+.mlc-modal-title {
+  color: #0F172A;
+  font-family: 'Noto Sans Telugu', 'Mandali', 'Onest', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 14px;
+  letter-spacing: -0.3px;
+}
+
+.mlc-modal-desc {
+  color: #4B5563;
+  font-family: 'Noto Sans Telugu', 'Mandali', 'Onest', sans-serif;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  margin: 0 auto 28px;
+  max-width: 420px;
+}
+
+.mlc-modal-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #FF6B00 0%, #D85600 100%);
+  color: #FFFFFF !important;
+  font-family: 'Noto Sans Telugu', 'Mandali', 'Onest', sans-serif;
+  font-size: 1.12rem;
+  font-weight: 700;
+  padding: 14px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(255, 107, 0, 0.38);
+  transition: all 0.25s ease;
+  min-width: 240px;
+}
+
+.mlc-modal-btn:hover {
+  background: linear-gradient(135deg, #E65C00 0%, #B84700 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(255, 107, 0, 0.48);
+}
+
+@media (max-width: 480px) {
+  .mlc-modal-card {
+    padding: 32px 20px 26px;
+    border-radius: 20px;
+  }
+  .mlc-modal-title {
+    font-size: 1.65rem;
+  }
+  .mlc-modal-desc {
+    font-size: 0.95rem;
+  }
+  .mlc-modal-btn {
+    width: 100%;
+    padding: 13px 24px;
+    font-size: 1.05rem;
+  }
 }
