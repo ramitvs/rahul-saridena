@@ -326,19 +326,16 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
         if (isFileProtocol) throw new Error("FILE_PROTOCOL");
 
-        const response = await fetch(
-          `https://formsubmit.co/ajax/${recipientEmail}`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json",
-            },
-            body: JSON.stringify(formData),
+        const response = await fetch('/api/send-mail', {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
           },
-        );
+          body: JSON.stringify(formData),
+        });
 
-        const data = await response.json();
+        const data = await response.json().catch(() => ({}));
 
         if (response.ok && (data.success === "true" || data.success === true)) {
           btn.innerHTML = `<i class="fa-solid fa-circle-check"></i> Message Sent!`;
@@ -358,23 +355,8 @@ document.addEventListener("DOMContentLoaded", () => {
               .querySelectorAll(".focused")
               .forEach((el) => el.classList.remove("focused"));
           }, 3000);
-        } else if (data.message && data.message.includes("Activation")) {
-          btn.innerHTML = `<i class="fa-solid fa-envelope-circle-check"></i> Form Submitted!`;
-          btn.style.background = "#f59e0b";
-
-          showToast(
-            "Submitted! Check saridenarahul@gmail.com to activate FormSubmit for instant inbox delivery.",
-            "info",
-          );
-
-          setTimeout(() => {
-            btn.innerHTML = originalHtml;
-            btn.style.background = "";
-            btn.disabled = false;
-            contactForm.reset();
-          }, 4000);
         } else {
-          throw new Error(data.message || "FormSubmit submission failed");
+          throw new Error(data.message || "Failed to send message");
         }
       } catch (err) {
         console.warn("AJAX submit error, using fallback option:", err);
@@ -461,19 +443,16 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
         if (isFileProtocol) throw new Error("FILE_PROTOCOL");
 
-        const response = await fetch(
-          `https://formsubmit.co/ajax/${recipientEmail}`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json",
-            },
-            body: JSON.stringify(formData),
+        const response = await fetch('/api/send-mail', {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
           },
-        );
+          body: JSON.stringify(formData),
+        });
 
-        const data = await response.json();
+        const data = await response.json().catch(() => ({}));
 
         if (response.ok && (data.success === "true" || data.success === true)) {
           btn.innerHTML = `<i class="fa-solid fa-check"></i> Subscribed!`;
@@ -486,22 +465,8 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.disabled = false;
             input.value = "";
           }, 3000);
-        } else if (data.message && data.message.includes("Activation")) {
-          btn.innerHTML = `<i class="fa-solid fa-check"></i> Received!`;
-          btn.style.background = "#f59e0b";
-          showToast(
-            "Subscription received! Activation link sent to saridenarahul@gmail.com.",
-            "info",
-          );
-
-          setTimeout(() => {
-            btn.innerHTML = originalHtml;
-            btn.style.background = "";
-            btn.disabled = false;
-            input.value = "";
-          }, 3000);
         } else {
-          throw new Error(data.message || "FormSubmit failed");
+          throw new Error(data.message || "Newsletter subscription failed");
         }
       } catch (err) {
         console.warn("Newsletter submission fallback:", err);

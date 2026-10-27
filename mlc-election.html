@@ -541,7 +541,7 @@
             </p>
           </div>
 
-          <form id="mlc-voter-form" class="clean-form" action="send-mail.php" method="POST" novalidate>
+          <form id="mlc-voter-form" class="clean-form" action="/api/send-mail" method="POST" novalidate>
             <!-- Anti-Spam HoneyPot -->
             <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
@@ -962,23 +962,26 @@
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> పంపుతున్నాము...';
 
-      fetch(form.action, {
+      const payload = Object.fromEntries(new FormData(form).entries());
+
+      fetch(form.action || '/api/send-mail', {
         method: 'POST',
-        body: new FormData(form),
         headers: {
+          'Content-Type': 'application/json',
           'Accept': 'application/json'
-        }
+        },
+        body: JSON.stringify(payload)
       })
-      .then(res => res.json())
-      .then(data => {
+      .then(async res => {
+        const data = await res.json().catch(() => ({}));
         submitBtn.disabled = false;
-        if (data.success) {
+        if (res.ok && data.success) {
           submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> వివరాలు సమర్పించబడ్డాయి!';
           showToast("వివరాలు నమోదయ్యాయి! ధన్యవాదాల పేజీకి వెళ్తున్నాము...", "success");
           form.reset();
           document.querySelectorAll('.clean-input, .clean-select').forEach(el => el.classList.remove('error'));
           setTimeout(() => {
-            window.location.href = 'thank-you.html';
+            window.location.href = data.redirect_url || 'thank-you.html';
           }, 700);
         } else {
           submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> వివరాలు సమర్పించండి (Submit Details)';
@@ -986,13 +989,10 @@
         }
       })
       .catch(error => {
+        console.error("Submission error:", error);
         submitBtn.disabled = false;
-        submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> వివరాలు సమర్పించబడ్డాయి!';
-        showToast("మీ వివరాలు విజయవంతంగా నమోదయ్యాయి!", "success");
-        form.reset();
-        setTimeout(() => {
-          window.location.href = 'thank-you.html';
-        }, 700);
+        submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> వివరాలు సమర్పించండి (Submit Details)';
+        showToast("సర్వర్ ఎర్రర్ సంభవించింది. దయచేసి వివరాలను సరిచూసి మళ్ళీ ప్రయత్నించండి లేదా వాట్సాప్ ద్వారా పంపండి.", "error");
       });
     });
   </script>
