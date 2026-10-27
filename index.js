@@ -1,9 +1,8 @@
-/**
- * Entry point for Cloudflare Workers / Node service
- */
-module.exports = {
+export default {
   async fetch(request, env, ctx) {
-    return new Response("Rahul Saridena Website Service Active", { status: 200 });
+    return new Response("Rahul Saridena Website Service Active", {
+      status: 200,
+      headers: { "content-type": "text/plain" }
+    });
   }
 };
-
