@@ -46,7 +46,7 @@ define('SMTP_HOST', 'smtp.gmail.com');
 define('SMTP_PORT', 587); // 587 for TLS / STARTTLS, 465 for SMTPS
 define('SMTP_SECURE', PHPMailer::ENCRYPTION_STARTTLS);
 define('SMTP_USER', 'saridenarahul@gmail.com');
-define('SMTP_PASS', 'rahulsaridena@123'); // If 2FA is enabled on Gmail, replace with a 16-char App Password
+define('SMTP_PASS', 'qvwnlgqslsfwjpkk'); // Google App Password (verified)
 define('MAIL_TO',   'saridenarahul@gmail.com');
 define('MAIL_TO_NAME', 'Dr. Rahul Saridena Office');
 
